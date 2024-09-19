@@ -6,7 +6,9 @@ public class Main {
         task4();
         task5();
         task6();
+        task7();
     }
+
     public static void task1() {
         System.out.println("Задание 1");
 
@@ -17,6 +19,7 @@ public class Main {
             System.out.println(" Значит ты несовершеннолетний ");
         }
     }
+
     public static void task2() {
         System.out.println("Задание 2");
 
@@ -85,24 +88,46 @@ public class Main {
             System.out.println(" Ты не можешь кататься на аттракционе ");
         }
     }
-    public static void task6(){
+    public static void task6() {
         System.out.println("Задание 6");
 
         byte people = 65;
         byte allPlaces = 102;
         byte sitDownPlaces = 60;
         System.out.println(" Всего зашло - " + people + " пассажира(ов) в вагон ");
-        if (allPlaces > people){
-            System.out.println(" В вагоне всего осталось - " + (allPlaces - people) + " свободных мест(а)");}
-        if (people < sitDownPlaces){
-            System.out.println(" Из них осталось - " + (sitDownPlaces - people) + " сидячих мест ");}else if(people >= sitDownPlaces){
-            System.out.println(" Сидячих мест не осталось ");}
-        if ((allPlaces - people) <= (allPlaces - sitDownPlaces)){
-            System.out.println(" Осталось - " + (allPlaces - people) + " свободных стоячих мест ");}else if ((allPlaces - people) > (allPlaces - sitDownPlaces)){
-            System.out.println(" Свободных стоячих осталось -  " + (allPlaces - sitDownPlaces) + " мест(а) ");}
-        if (allPlaces - people <= 0){
-            System.out.println(" Вагон уже полностью забит ");}
-            }
+        if (allPlaces > people) {
+            System.out.println(" В вагоне всего осталось - " + (allPlaces - people) + " свободных мест(а)");
         }
+        if (people < sitDownPlaces) {
+            System.out.println(" Из них осталось - " + (sitDownPlaces - people) + " сидячих мест ");
+        } else if (people >= sitDownPlaces) {
+            System.out.println(" Сидячих мест не осталось ");
+        }
+        if ((allPlaces - people) <= (allPlaces - sitDownPlaces)) {
+            System.out.println(" Осталось - " + (allPlaces - people) + " свободных стоячих мест ");
+        } else if ((allPlaces - people) > (allPlaces - sitDownPlaces)) {
+            System.out.println(" Свободных стоячих осталось -  " + (allPlaces - sitDownPlaces) + " мест(а) ");
+        }
+        if (allPlaces - people <= 0) {
+            System.out.println(" Вагон уже полностью забит ");
+        }
+    }
+    public static void task7(){
+            System.out.println("Задание 7");
+
+        int one = 12345;
+        int two = 23456;
+        int three = 34567;
+        if((one > two) && (one > three)){
+            System.out.println(" Самое большое число " + one);}else if((one < two) && (two > three)){
+            System.out.println(" Самое большое число " + two);}else if((one < two) && (two < three)){
+            System.out.println(" Самое большое число " + three);}
+        if((one == two) && (one < three)){
+            System.out.println(" Самое большое число " + three);}else if((one == three) && (one < two)){
+            System.out.println(" Самое большое число " + two);}else if((two == three) && (two < one)){
+            System.out.println(" Самое большое число " + one);}
+
+        }
+    }
 
 
