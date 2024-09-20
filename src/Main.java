@@ -15,7 +15,7 @@ public class Main {
         byte age = 13;
         System.out.println(" Если тебе " + age + " лет");
         if (age >= 18) {
-            System.out.println(" То ты совершеннолетний ");}else{
+            System.out.println(" То ты совершеннолетний ");} else {
             System.out.println(" Значит ты несовершеннолетний ");
         }
     }
@@ -23,111 +23,98 @@ public class Main {
     public static void task2() {
         System.out.println("Задание 2");
 
-        byte degrees = 3;
+        byte degrees = 15;
         System.out.println(" На улице " + degrees + " градуса");
-        if (degrees < 5){
-            System.out.println(" На улице холодно, нужно надеть шапку ");}else{
-        System.out.println(" Сегодня тепло, можно идти без шапки ");
+        if (degrees <= 5) {
+            System.out.println(" На улице холодно, нужно надеть шапку ");} else {
+            System.out.println(" Сегодня тепло, можно идти без шапки ");
         }
     }
+
     public static void task3() {
         System.out.println("Задание 3");
 
-        short speed = 140;
+        short speed = 60;
         System.out.println(" Если ты едешь со скоростью - " + speed + " км/ч ");
         if (speed > 60) {
-            System.out.println(" Дружище, ты превышаешь скорость ");}else {
+            System.out.println(" Дружище, ты превышаешь скорость ");} else {
             System.out.println(" Ты красава, едешь с положенной скоростью ");
         }
     }
+
     public static void task4() {
         System.out.println("Задание 4");
 
-        byte age = 35;
+        byte age = 18;
         System.out.println(" Если тебе - " + age + " лет ");
-        boolean needToGoKindergarden = (age > 2 && age < 6);
-        if (needToGoKindergarden) {
-            System.out.println(" Тебе нужно идти в детский сад ");
-        } else {
+        boolean needToGoKinderGarden = ((age >= 2) && (age <= 6));
+        boolean needToGoSchool = ((age >= 7) && (age <= 17));
+        boolean needToGoUniversity = (age >= 18 && age <= 24);
+        boolean needToWork = (age > 24);
+        if (needToGoKinderGarden) {
+            System.out.println(" Тебе нужно идти в детский сад ");} else {
             System.out.println(" Тебе в детский сад уже не нужно ходить ");
         }
-        boolean needToGoschool = (age > 7 && age < 18);
-        if (needToGoschool) {
-            System.out.println(" Иди в школу, школьник ");
-        } else {
+        if (needToGoSchool) {
+            System.out.println(" Иди в школу, школьник ");} else {
             System.out.println(" Я думаю, что ты не ходишь в школу ");
         }
-        boolean needToGoUniversity = (age > 17 && age < 24);
         if (needToGoUniversity) {
-            System.out.println(" Ты студент ");
-        } else {
+            System.out.println(" Ты студент ");} else {
             System.out.println(" Ты не являешься студентом ");
         }
-        boolean needToWork = (age > 24);
         if (needToWork) {
-            System.out.println(" Ты наверняка уже работаешь ");
-        } else {
-            System.out.println(" Ты бездельник ");
+            System.out.println(" Ты наверняка уже работаешь ");} else {
+            System.out.println(" Ты еще не ходишь на работу ");
         }
     }
+
     public static void task5() {
         System.out.println("Задание 5");
 
-        byte age = 35;
+        byte age = 5;
         System.out.println("Если тебе - " + age + " лет ");
-        boolean uDoNot = age < 5;
-        boolean mustBeAdults = age > 5 && age < 14;
-        boolean uCan = age > 14;
+        boolean uDoNot = (age < 5);
+        boolean mustBeAdults = ((age >= 5) && (age < 14));
+        boolean uCan = (age >= 14);
         if (uDoNot) {
-            System.out.println(" Ты не можешь кататься на аттракционе ");
-        } else if (mustBeAdults) {
-            System.out.println(" Ты можешь кататься на аттракционе, но в присутствии взрослых ");
-        } else if (uCan) {
+            System.out.println(" Ты не можешь кататься на аттракционе ");} else if (mustBeAdults) {
+            System.out.println(" Ты можешь кататься на аттракционе, но в присутствии взрослых ");} else if (uCan) {
             System.out.println(" Ты можешь кататься на аттракционе ");
-        } else {
-            System.out.println(" Ты не можешь кататься на аттракционе ");
         }
     }
+
     public static void task6() {
         System.out.println("Задание 6");
 
-        byte people = 65;
-        byte allPlaces = 102;
-        byte sitDownPlaces = 60;
-        System.out.println(" Всего зашло - " + people + " пассажира(ов) в вагон ");
-        if (allPlaces > people) {
-            System.out.println(" В вагоне всего осталось - " + (allPlaces - people) + " свободных мест(а)");
-        }
-        if (people < sitDownPlaces) {
-            System.out.println(" Из них осталось - " + (sitDownPlaces - people) + " сидячих мест ");
-        } else if (people >= sitDownPlaces) {
-            System.out.println(" Сидячих мест не осталось ");
-        }
-        if ((allPlaces - people) <= (allPlaces - sitDownPlaces)) {
-            System.out.println(" Осталось - " + (allPlaces - people) + " свободных стоячих мест ");
-        } else if ((allPlaces - people) > (allPlaces - sitDownPlaces)) {
-            System.out.println(" Свободных стоячих осталось -  " + (allPlaces - sitDownPlaces) + " мест(а) ");
-        }
-        if (allPlaces - people <= 0) {
-            System.out.println(" Вагон уже полностью забит ");
+        byte passengers = 89;
+        byte totalSeatsInTheCarriage = 102;
+        byte seatsInTheCarriage = 60;
+        System.out.println("Если хочет зайти - " + passengers + " пассажира(ов) в вагон ");
+        boolean stillFreeSeats = (seatsInTheCarriage > passengers);
+        boolean stillFreeStandingPlaces = ((seatsInTheCarriage <= passengers) && (passengers < totalSeatsInTheCarriage));
+        if (stillFreeSeats) {
+            System.out.println("То останется - " + (seatsInTheCarriage - passengers) + " свободных сидячих мест. И - " + (totalSeatsInTheCarriage - seatsInTheCarriage) + " свободных стоячих мест(а).");}else if(stillFreeStandingPlaces){
+            System.out.println("То сидячих мест не осталось, но осталось - " + ((totalSeatsInTheCarriage - seatsInTheCarriage) - (passengers - seatsInTheCarriage)) + " свободных стоячих мест(а)");} else {
+            System.out.println("То вагон уже полностью забит! Не хватило места - " + (passengers - totalSeatsInTheCarriage) + " пассажиру(ам).");
         }
     }
-    public static void task7(){
-            System.out.println("Задание 7");
 
-        int one = 12345;
+    public static void task7() {
+        System.out.println("Задание 7");
+
+        int one = 33567;
         int two = 23456;
-        int three = 34567;
-        if((one > two) && (one > three)){
-            System.out.println(" Самое большое число " + one);}else if((one < two) && (two > three)){
-            System.out.println(" Самое большое число " + two);}else if((one < two) && (two < three)){
-            System.out.println(" Самое большое число " + three);}
-        if((one == two) && (one < three)){
-            System.out.println(" Самое большое число " + three);}else if((one == three) && (one < two)){
-            System.out.println(" Самое большое число " + two);}else if((two == three) && (two < one)){
-            System.out.println(" Самое большое число " + one);}
-
+        int three = 33567;
+        boolean oneBiggest = ((one > two) && (one > three));
+        boolean twoBiggest = ((one < two) && (two > three));
+        if (oneBiggest){
+            System.out.println(" Самое большое число " + one);}else if(twoBiggest){
+            System.out.println(" Самое большое число " + two);} else{
+            System.out.println(" Самое большое число " + three);
         }
     }
+}
+
 
 
