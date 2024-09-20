@@ -15,7 +15,8 @@ public class Main {
         byte age = 13;
         System.out.println(" Если тебе " + age + " лет");
         if (age >= 18) {
-            System.out.println(" То ты совершеннолетний ");} else {
+            System.out.println(" То ты совершеннолетний ");
+        } else {
             System.out.println(" Значит ты несовершеннолетний ");
         }
     }
@@ -26,7 +27,8 @@ public class Main {
         byte degrees = 15;
         System.out.println(" На улице " + degrees + " градуса");
         if (degrees <= 5) {
-            System.out.println(" На улице холодно, нужно надеть шапку ");} else {
+            System.out.println(" На улице холодно, нужно надеть шапку ");
+        } else {
             System.out.println(" Сегодня тепло, можно идти без шапки ");
         }
     }
@@ -37,7 +39,8 @@ public class Main {
         short speed = 60;
         System.out.println(" Если ты едешь со скоростью - " + speed + " км/ч ");
         if (speed > 60) {
-            System.out.println(" Дружище, ты превышаешь скорость ");} else {
+            System.out.println(" Дружище, ты превышаешь скорость ");
+        } else {
             System.out.println(" Ты красава, едешь с положенной скоростью ");
         }
     }
@@ -52,19 +55,23 @@ public class Main {
         boolean needToGoUniversity = (age >= 18 && age <= 24);
         boolean needToWork = (age > 24);
         if (needToGoKinderGarden) {
-            System.out.println(" Тебе нужно идти в детский сад ");} else {
+            System.out.println(" Тебе нужно идти в детский сад ");
+        } else {
             System.out.println(" Тебе в детский сад уже не нужно ходить ");
         }
         if (needToGoSchool) {
-            System.out.println(" Иди в школу, школьник ");} else {
+            System.out.println(" Иди в школу, школьник ");
+        } else {
             System.out.println(" Я думаю, что ты не ходишь в школу ");
         }
         if (needToGoUniversity) {
-            System.out.println(" Ты студент ");} else {
+            System.out.println(" Ты студент ");
+        } else {
             System.out.println(" Ты не являешься студентом ");
         }
         if (needToWork) {
-            System.out.println(" Ты наверняка уже работаешь ");} else {
+            System.out.println(" Ты наверняка уже работаешь ");
+        } else {
             System.out.println(" Ты еще не ходишь на работу ");
         }
     }
@@ -78,8 +85,10 @@ public class Main {
         boolean mustBeAdults = ((age >= 5) && (age < 14));
         boolean uCan = (age >= 14);
         if (uDoNot) {
-            System.out.println(" Ты не можешь кататься на аттракционе ");} else if (mustBeAdults) {
-            System.out.println(" Ты можешь кататься на аттракционе, но в присутствии взрослых ");} else if (uCan) {
+            System.out.println(" Ты не можешь кататься на аттракционе ");
+        } else if (mustBeAdults) {
+            System.out.println(" Ты можешь кататься на аттракционе, но в присутствии взрослых ");
+        } else if (uCan) {
             System.out.println(" Ты можешь кататься на аттракционе ");
         }
     }
@@ -94,8 +103,10 @@ public class Main {
         boolean stillFreeSeats = (seatsInTheCarriage > passengers);
         boolean stillFreeStandingPlaces = ((seatsInTheCarriage <= passengers) && (passengers < totalSeatsInTheCarriage));
         if (stillFreeSeats) {
-            System.out.println("То останется - " + (seatsInTheCarriage - passengers) + " свободных сидячих мест. И - " + (totalSeatsInTheCarriage - seatsInTheCarriage) + " свободных стоячих мест(а).");}else if(stillFreeStandingPlaces){
-            System.out.println("То сидячих мест не осталось, но осталось - " + ((totalSeatsInTheCarriage - seatsInTheCarriage) - (passengers - seatsInTheCarriage)) + " свободных стоячих мест(а)");} else {
+            System.out.println("То останется - " + (seatsInTheCarriage - passengers) + " свободных сидячих мест. И - " + (totalSeatsInTheCarriage - seatsInTheCarriage) + " свободных стоячих мест(а).");
+        } else if (stillFreeStandingPlaces) {
+            System.out.println("То сидячих мест не осталось, но осталось - " + ((totalSeatsInTheCarriage - seatsInTheCarriage) - (passengers - seatsInTheCarriage)) + " свободных стоячих мест(а)");
+        } else {
             System.out.println("То вагон уже полностью забит! Не хватило места - " + (passengers - totalSeatsInTheCarriage) + " пассажиру(ам).");
         }
     }
@@ -108,9 +119,11 @@ public class Main {
         int three = 33567;
         boolean oneBiggest = ((one > two) && (one > three));
         boolean twoBiggest = ((one < two) && (two > three));
-        if (oneBiggest){
-            System.out.println(" Самое большое число " + one);}else if(twoBiggest){
-            System.out.println(" Самое большое число " + two);} else{
+        if (oneBiggest) {
+            System.out.println(" Самое большое число " + one);
+        } else if (twoBiggest) {
+            System.out.println(" Самое большое число " + two);
+        } else {
             System.out.println(" Самое большое число " + three);
         }
     }
