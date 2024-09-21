@@ -1,12 +1,12 @@
 public class Main {
     public static void main(String[] args) {
-        task1();
-        task2();
-        task3();
-        task4();
+//        task1();
+//        task2();
+//        task3();
+//        task4();
         task5();
-        task6();
-        task7();
+//        task6();
+//        task7();
     }
 
     public static void task1() {
@@ -79,16 +79,15 @@ public class Main {
     public static void task5() {
         System.out.println("Задание 5");
 
-        byte age = 5;
+        byte age = 15;
         boolean uDoNot = (age < 5);
         boolean mustBeAdults = ((age >= 5) && (age < 14));
-        boolean uCan = (age >= 14);
         System.out.println("Если тебе - " + age + " лет.  Можно ли кататься на аттракционе? ");
         if (uDoNot) {
             System.out.println("Ты не можешь кататься на аттракционе ");
         } else if (mustBeAdults) {
             System.out.println("Ты можешь кататься на аттракционе, но в присутствии взрослых ");
-        } else if (uCan) {
+        } else {
             System.out.println("Ты можешь кататься на аттракционе ");
         }
     }
