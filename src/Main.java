@@ -1,11 +1,11 @@
 public class Main {
     public static void main(String[] args) {
-        task1();
-        task2();
-        task3();
-        task4();
-        task5();
-        task6();
+//        task1();
+//        task2();
+//        task3();
+//        task4();
+//        task5();
+//        task6();
         task7();
     }
 
@@ -79,52 +79,59 @@ public class Main {
     public static void task5() {
         System.out.println("Задание 5");
 
-        byte age = 15;
-        boolean uDoNot = (age < 5);
-        boolean mustBeAdults = ((age >= 5) && (age < 14));
+        byte age = 7;
+        boolean smallAge = age > 5;
+        boolean averageAge = age >= 5 && age <= 14;
+        boolean olderAge = age > 14;
+        boolean thereIsAnAdult = true;
         System.out.println("Если тебе - " + age + " лет.  Можно ли кататься на аттракционе? ");
-        if (uDoNot) {
-            System.out.println("Ты не можешь кататься на аттракционе ");
-        } else if (mustBeAdults) {
+        if (smallAge && olderAge) {
+            System.out.println("Ты можешь кататься на аттракционе ");
+        } else if (averageAge && thereIsAnAdult) {
             System.out.println("Ты можешь кататься на аттракционе, но в присутствии взрослых ");
         } else {
-            System.out.println("Ты можешь кататься на аттракционе ");
+            System.out.println("Ты не можешь кататься на аттракционе ");
         }
     }
 
     public static void task6() {
         System.out.println("Задание 6");
 
-        byte passengers = 89;
+        byte passengers = 10;
         byte totalSeatsInTheCarriage = 102;
         byte seatsInTheCarriage = 60;
         boolean stillFreeSeats = (seatsInTheCarriage > passengers);
-        boolean stillFreeStandingPlaces = ((seatsInTheCarriage <= passengers) && (passengers < totalSeatsInTheCarriage));
-        System.out.println("Всего в вагоне - " + totalSeatsInTheCarriage + " мест(а). Из них - " + seatsInTheCarriage + " сидячих мест(а).");
-        System.out.println("Если в вагон зайдет - " + passengers + " пассажира(ов)");
-        if (stillFreeSeats) {
-            System.out.println("То останется - " + (seatsInTheCarriage - passengers) + " свободных сидячих мест. И - " + (totalSeatsInTheCarriage - seatsInTheCarriage) + " свободных стоячих мест(а).");
-        } else if (stillFreeStandingPlaces) {
-            System.out.println("То сидячих мест не осталось, но осталось - " + ((totalSeatsInTheCarriage - seatsInTheCarriage) - (passengers - seatsInTheCarriage)) + " свободных стоячих мест(а)");
+        boolean stillFreeStandingPlaces = ((seatsInTheCarriage <= passengers));
+        boolean allStillSeats = (totalSeatsInTheCarriage > passengers);
+        System.out.println("Вместимость одного вагона поезда - " + totalSeatsInTheCarriage + " мест(а). Вагон рассчитан на - " + seatsInTheCarriage + " сидячих мест(а). Все остальные  - стоячие.");
+        System.out.println("Если в вагон хочет зайти - " + passengers + " пассажира(ов)");
+        if (allStillSeats) {
+            System.out.println("Останется - " + (totalSeatsInTheCarriage - passengers) + " свободных мест(а)");
         } else {
-            System.out.println("То вагон уже полностью забит! Не хватило места - " + (passengers - totalSeatsInTheCarriage) + " пассажиру(ам).");
+            System.out.println("Вагон уже полностью забит! Мест не осталось - " + (passengers - totalSeatsInTheCarriage) + " пассажирам(у).");
+        }
+        if (stillFreeSeats) {
+            System.out.println("Сидячих мест - " + (seatsInTheCarriage - passengers) + " и стоячих мест - " + (totalSeatsInTheCarriage - seatsInTheCarriage));
+        } else if (stillFreeStandingPlaces && allStillSeats) {
+            System.out.println("Сидячих мест не осталось, стоячих мест - " + ((totalSeatsInTheCarriage - seatsInTheCarriage) - (passengers - seatsInTheCarriage)));
         }
     }
 
     public static void task7() {
         System.out.println("Задание 7");
 
-        int one = 33568;
-        int two = 23456;
-        int three = 33567;
-        boolean oneBiggest = ((one > two) && (one > three));
-        boolean twoBiggest = ((one < two) && (two > three));
+        int one = 33563;
+        int two = 33561;
+        int three = 33561;
+        boolean oneBiggest = one >= two && one >= three;
+        boolean twoBiggest = two >= one && two >= three;
+        boolean threeBiggest = three >= one && three >= two;
         System.out.println("Сравним три числа: первое " + one + " второе " + two + " третье " + three + " какое из них больше?");
         if (oneBiggest) {
             System.out.println("Правильно, самое большое число " + one);
         } else if (twoBiggest) {
             System.out.println("Правильно, самое большое число " + two);
-        } else {
+        } else if (threeBiggest) {
             System.out.println("Правильно, самое большое число " + three);
         }
     }
